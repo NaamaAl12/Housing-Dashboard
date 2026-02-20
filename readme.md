@@ -1,4 +1,4 @@
-# U.S. Housing Affordability Dashboard
+# U.S. Housing Affordability Dashboard - Lab 6
 
 **Live URL:** https://NaamaAl12.github.io/Housing-Dashboard
 
