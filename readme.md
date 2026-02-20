@@ -2,6 +2,9 @@
 
 **Live URL:** [https://NaamaAl12.github.io/Housing-Dashboard](https://naamaal12.github.io/Housing-Dashboard/)
 
+# AI Disclosure
+- No AI tools were used in this assignment
+
 ## Overview
 
 This smart dashboard visualizes housing affordability across U.S. states using median household income as the primary metric. The dashboard is built with Mapbox GL JS for the interactive map and C3.js for the data visualizations.
