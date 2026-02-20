@@ -1,0 +1,183 @@
+/* Removes default browser spacing on all elements */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background: #0d1117;
+  color: #c9d1d9;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* Main layout: two columns side by side (panel + map) */
+#container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Left info panel: fixed width, scrollable, dark card style */
+#info-panel {
+  width: 380px;
+  min-width: 380px;
+  background: #161b22;
+  border-right: 1px solid #21262d;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 20px;
+}
+
+#info-panel h1 {
+  font-size: 1.3rem;
+  color: #f0f6fc;
+}
+
+.subtitle {
+  font-size: 0.75rem;
+  color: #6e7681;
+  margin-top: -14px;
+}
+
+/* Dynamic income counter block */
+.stat-block {
+  background: #0d1117;
+  border: 1px solid #21262d;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.stat-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #6e7681;
+  margin-bottom: 8px;
+}
+
+/* The big dollar number that updates dynamically */
+#income-count {
+  font-size: 2.5rem;
+  color: #f5a623;
+  font-weight: 700;
+}
+
+.chart-section {
+  background: #0d1117;
+  border: 1px solid #21262d;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.chart-title {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #6e7681;
+  margin-bottom: 10px;
+}
+
+#bar-chart, #age-chart, #race-chart {
+  width: 100%;
+  height: 160px;
+}
+
+#description {
+  font-size: 0.78rem;
+  color: #6e7681;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#description a {
+  color: #4fc3c3;
+  text-decoration: none;
+}
+
+#description a:hover {
+  text-decoration: underline;
+}
+
+#map {
+  flex: 1;
+  height: 100vh;
+}
+
+.c3 text {
+  fill: #6e7681 !important;
+  font-size: 0.65rem !important;
+}
+
+.c3-axis path,
+.c3-axis line {
+  stroke: #21262d !important;
+}
+
+.c3-grid line {
+  stroke: #21262d !important;
+}
+
+/* Mapbox hover popup styling */
+.mapboxgl-popup-content {
+  background: #161b22 !important;
+  border: 1px solid #21262d !important;
+  color: #f0f6fc !important;
+  border-radius: 6px !important;
+  padding: 10px 14px !important;
+  font-family: 'Helvetica Neue', sans-serif !important;
+  font-size: 0.85rem !important;
+}
+
+/* Hides the default popup arrow/tip */
+.mapboxgl-popup-tip {
+  display: none;
+}
+
+#legend {
+  position: absolute;
+  bottom: 30px;
+  right: 16px;
+  background: #161b22;
+  border: 1px solid #21262d;
+  border-radius: 8px;
+  padding: 14px 16px;
+  z-index: 5;
+}
+
+#legend h4 {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6e7681;
+  margin-bottom: 10px;
+}
+
+.legend-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 0.75rem;
+  color: #c9d1d9;
+}
+
+.legend-swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.legend-source {
+  margin-top: 8px;
+  font-size: 0.65rem;
+  color: #6e7681;
+}
